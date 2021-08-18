@@ -13,7 +13,7 @@ mongoose.connect(process.env.DATABASE, {
 const app = express();
 
 //express route middleware
-app.use(route);
+app.use('/api',route);
 
 // app.get("/", (req, res) => {
 //     res.send("hello again");    

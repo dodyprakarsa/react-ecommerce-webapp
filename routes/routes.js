@@ -1,8 +1,7 @@
 const express = require('express');
 const route = express.Router();
+const {controlApi} = require('../controllers/controller');
 
-route.get("/", (req, res) => {
-    res.send("Hello from routes.js")
-});
+route.get("/", controlApi);
 
 module.exports = route;
