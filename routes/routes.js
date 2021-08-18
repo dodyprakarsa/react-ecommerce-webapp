@@ -1,7 +1,7 @@
 const express = require('express');
 const route = express.Router();
-const {controlApi} = require('../controllers/controller');
+const {signup} = require('../controllers/controller');
 
-route.get("/", controlApi);
+route.post("/signup", signup);
 
 module.exports = route;
