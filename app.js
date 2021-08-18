@@ -1,11 +1,12 @@
 const express = require('express');
+const expressValidator = require('express-validator');
 const app = express();
 const mongoose = require('mongoose');
 const morgan = require('morgan');
 const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
 const route = require('./routes/routes');
-const expressValidator = require('express-validator');
+
 require('dotenv').config();
 
 //database connection

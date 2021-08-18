@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const crypto = require('crypto');
-const uuidv1 = require('uuid/v1');
+const uuidv1 = require('uuid');
 const { get } = require('http');
 
 const userSchema = new mongoose.Schema({
@@ -30,7 +30,7 @@ const userSchema = new mongoose.Schema({
 
     salt: String,
     role: {
-        type: number,
+        type: Number,
         default: 0
     },
 
