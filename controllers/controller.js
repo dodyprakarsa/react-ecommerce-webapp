@@ -1,4 +1,4 @@
-const User = require ('../models/model');
+const User = require('../models/model');
 const {errorHandler} = require('../helper/errorHandling');
 
 exports.signup = (req, res) => {
@@ -14,4 +14,6 @@ exports.signup = (req, res) => {
         user.hashed_password = undefined;
         res.json({user});
     });
+    
+    // res.json({message: 'there you are'});
 };

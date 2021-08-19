@@ -1,9 +1,9 @@
 const express = require('express');
-const expressValidator = require('express-validator');
 const app = express();
+const expressValidator = require('express-validator');
 const mongoose = require('mongoose');
 const morgan = require('morgan');
-const bodyParser = require('body-parser');
+// const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
 const route = require('./routes/routes');
 
@@ -19,7 +19,7 @@ mongoose.connect(process.env.DATABASE, {
 //express route middleware
 app.use('/api',route);
 app.use(morgan('dev'));
-app.use(bodyParser.json());
+app.use(express.json());
 app.use(cookieParser());
 app.use(expressValidator());
 

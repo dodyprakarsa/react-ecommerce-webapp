@@ -1,8 +1,8 @@
 const express = require('express');
 const route = express.Router();
+const {validationResult} = require('../validator');
 const {signup} = require('../controllers/controller');
-const {userSignupValidator} = require('../validator/index');
 
-route.post("/signup", userSignupValidator, signup);
+route.post("/signup", validationResult, signup);
 
 module.exports = route;
